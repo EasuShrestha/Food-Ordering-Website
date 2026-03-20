@@ -120,7 +120,7 @@
                 $upload= move_uploaded_file($source_path,$destination_path);
 
                 // Check whether the image is uploaded or not
-                // If the image is not uploaded then we will stop teh process and redirect with error message
+                // If the image is not uploaded then we will stop the process and redirect with error message
                 if($upload==false)
                     {
                         // SET message

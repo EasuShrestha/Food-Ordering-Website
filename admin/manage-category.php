@@ -65,10 +65,13 @@
                               if($image_name!="")
                                 {
                                      // Display the image
+                                     ?>
+                                           <img src="<?php echo SITEURL; ?>images/category/<?php echo $image_name;?>" width="100px">
+                                     <?php
                                 }
                                 else{
                                     // Display the message
-                                    echo "<div classs='error'>Image not Added.</div>"
+                                    echo "<div class='error'>Image not Added.</div>";
                                 }
 
                             ?>
