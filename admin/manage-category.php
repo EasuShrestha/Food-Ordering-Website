@@ -5,14 +5,28 @@
          <h1>Manage Category</h1>
 
          <br><br>
-             <?php
+        <?php
 
-          if(isset($_SESSION['add']))
+            if(isset($_SESSION['add']))
             {
                 echo $_SESSION['add'];
                 unset($_SESSION['add']);
             }
-
+            if(isset($_SESSION['remove']))
+                {
+                    echo $_SESSION['remove'];
+                    unset($_SESSION['remove']);
+                }
+            if(isset($_SESSION['delete']))
+                {
+                    echo $_SESSION['delete'];
+                    unset($_SESSION['delete']);
+                }
+             if(isset($_SESSION['no-category-found']))
+                {
+                    echo $_SESSION['no-category-found'];
+                    unset ($_SESSION['no-category-found']);
+                }
         ?>
         <br><br>
 
@@ -76,13 +90,13 @@
 
                             ?>
                         </td>
-                        <td><?php echo $image_name;?></td>
+                      
                         <td><?php echo $featured;?></td>
                         <td><?php echo $active;?></td>
 
                         <td>
-                            <a href="#" class="btn-secondary">Update Admin</a>
-                            <a href="#" class="btn-danger">Delete Admin</a>
+                            <a href="<?php echo SITEURL; ?>admin/update-category.php?id=<?php echo $id;?>" class="btn-secondary">Update Admin</a>
+                            <a href="<?php echo SITEURL; ?>admin/delete-category.php?id=<?php echo $id; ?>&image_name=<?php echo $image_name; ?>" class="btn-danger">Delete Category</a>
                         </td>
                     </tr>
 
