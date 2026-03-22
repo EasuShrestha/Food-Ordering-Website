@@ -80,7 +80,7 @@
             {
                 $image_name = $_FILES['image']['name'];
 
-                // 🔥 IMPORTANT FIX (missing in your code)
+               
                 if($image_name != "")
                 {
                     // Get extension
